@@ -1,0 +1,48 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="3D Game Android"
+run/main_scene="res://level_1.tscn"
+config/features=PackedStringArray("4.2", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[dotnet]
+
+project/assembly_name="3D Game Android"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/virtual_joystick/plugin.cfg")
+
+[filesystem]
+
+import/fbx/enabled=false
+
+[input]
+
+" "={
+"deadzone": 0.5,
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":20,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+pointing/emulate_mouse_from_touch=false
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
+anti_aliasing/quality/msaa_3d=1
